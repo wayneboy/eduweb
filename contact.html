@@ -56,11 +56,13 @@
             var phone = $("#phone-input").val();
             var email = $("#email-input").val();
             var desc = $("#description-input").val();
+            var ltype =  $("#lesson-type").val();
             var data = {
                 name: name,
                 phone: phone,
                 email: email,
-                desc: desc
+                lessontype : ltype,
+                desc: desc,
             };
 
             var junk = JSON.stringify(data);
