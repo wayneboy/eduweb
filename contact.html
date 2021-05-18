@@ -35,15 +35,16 @@
                 alert("Name can not less than 2 char");
                 return;
             }
-            var mobilere = /[0-9]{10}/;
-            if (!mobilere.test($("#phone-input").val())) {
-                alert("Please enter valid mobile number");
-                return;
-            }
-            if ($("#email-input").val() == "") {
-                alert("Please enter your email id");
-                return;
-            }
+            
+            //var mobilere = /[0-9]{10}/;
+            //if (!mobilere.test($("#phone-input").val())) {
+            //    alert("Please enter valid mobile number");
+            //    return;
+            //}
+            //if ($("#email-input").val() == "") {
+            //    alert("Please enter your email id");
+            //    return;
+            //}
 
             var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
             if (!reeamil.test($("#email-input").val())) {
@@ -76,13 +77,13 @@
 
                 success: function () {
                     // clear form and show a success message
-                    alert("Successfull");
+                    alert("Thankyou , we will contact you shortly" );
                     document.getElementById("contact-form").reset();
                     location.reload();
                 },
                 error: function () {
                     // show an error message
-                    alert("Thank you, we will contact you shortly" + junk);
+                    alert("There was a page error please try again or send us an email" );
                 }
             });
         }
@@ -145,7 +146,7 @@
             <li class="list-group-item">Phone: +61 406 175 613 Australia</li>
 
         </ul>
-<!--
+        <h4>Or fill out the form below</h4>
         <form id="contact-form" method="post">
 
             <div class="mb-3">
@@ -169,7 +170,7 @@
                     <option selected>Please select</option>
                     <option value="Group Lessons">Group Lessons</option>
                     <option value="Private Lessons">Private Lessons</option>
-                    <option value="Childrens Lessons">Childrens Lessons</option>
+                    <option value="Free Lesson">Free Lesson</option>
                 </select>
 
             </div>
@@ -187,7 +188,7 @@
             </div>
 
         </form>
-    -->
+    
 
 
         <footer class="container py-5">
